@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stopwatch / Countdown</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="box default" id="themeBox">
+      <h1>⏱️ Stopwatch / Countdown</h1>
+
+      <div class="mode-switch">
+        <label><input type="checkbox" id="modeToggle"> Countdown Mode</label>
+        <input type="number" id="countdownInput" placeholder="Time (sec)" disabled />
+      </div>
+
+      <div id="display">00:00:00</div>
+
+      <div class="buttons">
+        <button id="start">Start</button>
+        <button id="pause">Pause</button>
+        <button id="reset">Reset</button>
+        <button id="lap">Lap</button>
+        <button id="saveSession">Save</button>
+      </div>
+
+      <ul id="laps"></ul>
+
+      <div class="theme-section">
+        <label for="theme">🎨 Theme:</label>
+        <select id="theme">
+          <option value="default">Default</option>
+          <option value="neon">Neon</option>
+          <option value="retro">Retro</option>
+          <option value="nature">Nature</option>
+        </select>
+      </div>
+
+      <div class="toggle-theme">
+        <label><input type="checkbox" id="darkModeToggle"> Dark Mode</label>
+      </div>
+
+      <audio id="beep" src="beep.mp3" preload="auto"></audio>
+
+      <div class="session-history">
+        <h3>📆 Previous Sessions</h3>
+        <button id="viewSessions">View Sessions</button>
+        <button id="clearAllSessions">🧼 Clear All</button>
+        <ul id="sessionList"></ul>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

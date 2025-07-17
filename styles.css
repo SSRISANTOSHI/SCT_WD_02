@@ -1,0 +1,107 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  padding: 25px;
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Theme-specific variables */
+.box.default {
+  --bg-color: #f0f4f8;
+  --text-color: #111827;
+}
+.box.neon {
+  --bg-color: #0f0c29;
+  --text-color: #00f7ff;
+}
+.box.retro {
+  --bg-color: #fefae0;
+  --text-color: #000;
+}
+.box.nature {
+  --bg-color: #e0f7f1;
+  --text-color: #064e3b;
+}
+.box.dark {
+  --bg-color: #1e293b;
+  --text-color: #f8fafc;
+}
+
+.box {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+#display {
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+#laps, #sessionList {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+#laps li, #sessionList li {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.theme-section, .toggle-theme, .mode-switch, .session-history {
+  margin-top: 15px;
+}
+
+button.delete-btn {
+  font-size: 12px;
+  margin-top: 5px;
+  background-color: crimson;
+  color: white;
+  border-radius: 4px;
+}
+
+.flash-warning {
+  animation: flash 1s steps(1) infinite;
+  color: red;
+}
+
+@keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
